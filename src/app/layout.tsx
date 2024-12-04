@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/styles/globals.css';
 
 import type { Metadata } from 'next';
 import { IBM_Plex_Mono } from 'next/font/google';
@@ -28,6 +28,7 @@ export default function RootLayout({
         className={cn(
           ibmFlexMono.variable,
           helvetica.variable,
+          'min-h-screen',
           'font-ibm',
           'dark',
         )}
