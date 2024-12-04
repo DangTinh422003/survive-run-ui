@@ -53,7 +53,11 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div
+          className={`
+            flex max-h-[400px] flex-col gap-3 overflow-y-scroll scrollbar
+          `}
+        >
           {USER_ITEMS.map((item, _i) => (
             <UserItem
               key={_i}
@@ -69,7 +73,7 @@ const Home = () => {
 
       <div
         className={`
-          fixed bottom-20 left-1/2 flex w-3/5 -translate-x-1/2 items-center
+          fixed bottom-10 left-1/2 flex w-3/5 -translate-x-1/2 items-center
           justify-center rounded-2xl bg-black/10 py-4
         `}
       >
