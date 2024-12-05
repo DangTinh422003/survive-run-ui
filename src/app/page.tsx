@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import UserItem from '@/components/UserItem';
 import { NAVIGATE_ITEMS, USER_ITEMS } from '@/constants/indext';
@@ -35,7 +36,8 @@ const Home = () => {
         </div>
         <div className="grid grid-cols-4 gap-x-6">
           {NAVIGATE_ITEMS.map((item) => (
-            <div
+            <Link
+              href={item.link}
               key={item.title}
               className={`
                 flex cursor-pointer flex-col gap-3 rounded-lg bg-[#102c06] p-4
@@ -49,7 +51,7 @@ const Home = () => {
               >
                 {item.title}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 

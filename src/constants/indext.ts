@@ -4,18 +4,22 @@ export const NAVIGATE_ITEMS = [
   {
     icon: QrCode,
     title: 'Receive',
+    link: '/receive',
   },
   {
     icon: Medal,
     title: 'Ranking',
+    link: '/ranking',
   },
   {
     icon: RefreshCw,
     title: 'Trade',
+    link: '/trade',
   },
   {
     icon: FolderClosed,
     title: 'History',
+    link: '/history',
   },
 ];
 
