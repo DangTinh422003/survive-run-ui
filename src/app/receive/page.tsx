@@ -45,7 +45,7 @@ const Receive = () => {
     <div className="container mx-auto h-screen overflow-hidden px-4 py-10">
       <div
         className={`
-          flex h-20 items-center justify-between rounded-xl bg-black p-6
+          flex h-[84px] items-center justify-between rounded-xl bg-black p-6
         `}
       >
         {!isCopied ? (

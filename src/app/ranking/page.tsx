@@ -7,7 +7,7 @@ const Ranking = () => {
     <div className="container mx-auto h-screen overflow-hidden px-4 py-10">
       <div
         className={`
-          flex h-20 items-center justify-between rounded-xl bg-black p-6
+          flex h-[84px] items-center justify-between rounded-xl bg-black p-6
         `}
       >
         <Link href={'/'}>
@@ -24,7 +24,8 @@ const Ranking = () => {
       </div>
 
       <div className="my-10 flex flex-col gap-6">
-        <div
+        <Link
+          href={'/ranking/category/0xE7472b31ee450278616Ac7D7aeb899a3248B3cE2'}
           className={`
             flex items-center justify-between rounded-2xl border
             border-[#308b10] px-4 py-8 shadow-xl drop-shadow-lg
@@ -50,7 +51,7 @@ const Ranking = () => {
             </div>
           </div>
           <p className="font-bold">1,423,647,756.06</p>
-        </div>
+        </Link>
 
         <div className="flex flex-col gap-1">
           <div
