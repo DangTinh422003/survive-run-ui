@@ -80,9 +80,12 @@ const Home = () => {
         `}
       >
         <div className="cursor-pointer select-none text-center">
-          <p className="text-lg font-semibold uppercase text-[#f70c4b]">
+          <Link
+            href={'/play'}
+            className="text-lg font-semibold uppercase text-[#f70c4b]"
+          >
             start game
-          </p>
+          </Link>
           <p className="text-[#9d062f]">(Let&apos;s start the war)</p>
         </div>
       </div>
