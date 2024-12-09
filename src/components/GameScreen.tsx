@@ -10,12 +10,37 @@ const GameSreen = () => {
     setIsClient(true);
   }, []);
 
-  const { unityProvider } = useUnityContext({
+  const {
+    unityProvider,
+    sendMessage,
+    isLoaded,
+    addEventListener,
+    removeEventListener,
+  } = useUnityContext({
     loaderUrl: '/build/Build/build.loader.js',
     dataUrl: '/build/Build/build.data.br',
     frameworkUrl: '/build/Build/build.framework.js.br',
     codeUrl: '/build/Build/build.wasm.br',
   });
+
+  useEffect(() => {
+    const handleSendMsg = () => {
+      sendMessage(
+        'GameController',
+        'InputPlayer',
+        JSON.stringify({
+          coins: 999,
+          percentage: 15,
+        }),
+      );
+    };
+
+    addEventListener('ReadyToChange', handleSendMsg);
+
+    return () => {
+      removeEventListener('ReadyToChange', handleSendMsg);
+    };
+  }, [isLoaded, addEventListener, removeEventListener, sendMessage]);
 
   return !isClient ? (
     <div className="flex h-screen w-screen items-center justify-center">
